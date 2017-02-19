@@ -63,11 +63,6 @@
             <artifactId>jersey-media-json-jackson</artifactId>
             <version>${jersey.version}</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.glassfish.hk2</groupId>
-            <artifactId>hk2-utils</artifactId>
-            <version>2.5.0-b32</version>
-        </dependency>-->
         <dependency>
             <groupId>org.glassfish.jersey.ext</groupId>
             <artifactId>jersey-spring3</artifactId>

@@ -32,7 +32,7 @@ public class Main {
      */
     public static void main(String[] args) throws IOException {
         final HttpServer server = startServer();
-        System.out.println(String.format("SERVICE START... \n"
+        System.out.println(String.format("SERVICE STARTING... \n"
                 + "view WADL %sapplication.wadl \n"
                 + "Hit enter to stop it...", BASE_URI));
         System.in.read();
