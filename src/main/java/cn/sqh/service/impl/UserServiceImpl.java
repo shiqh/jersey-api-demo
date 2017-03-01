@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
+import java.util.List;
+
 /**
  * 用户服务实现
  * Created by Administrator on 2017/2/17.
@@ -34,6 +36,16 @@ public class UserServiceImpl implements UserService {
         Assert.hasText(userId, "用户ID不能为空");
         try {
             return userMapper.selectByPrimaryKey(userId);
+        } catch (Exception e) {
+            throw new Exception(e);
+        }
+    }
+
+    @Override
+    public List<User> getUsers(User user) throws Exception {
+        user = user == null ? new User() : user;
+        try {
+            return userMapper.getUsers(user);
         } catch (Exception e) {
             throw new Exception(e);
         }

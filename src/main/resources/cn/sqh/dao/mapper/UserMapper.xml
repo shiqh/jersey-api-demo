@@ -11,6 +11,18 @@
       id, `name`, age
     </sql>
 
+    <sql id="Query_User_where">
+        <if test="id != null and id != ''">
+            AND id = #{id,jdbcType=VARCHAR}
+        </if>
+        <if test="name != null and name != ''">
+            AND `name` = #{name,jdbcType=VARCHAR}
+        </if>
+        <if test="age != null">
+            AND age = #{age,jdbcType=INTEGER}
+        </if>
+    </sql>
+
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
         SELECT
         <include refid="Base_Column_List"/>
@@ -50,5 +62,12 @@
         </set>
         WHERE id = #{id,jdbcType=VARCHAR}
     </update>
+
+    <select id="getUsers" resultMap="BaseResultMap" parameterType="cn.sqh.model.User">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM `user`
+        <include refid="Query_User_where"/>
+    </select>
 
 </mapper>

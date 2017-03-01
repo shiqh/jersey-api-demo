@@ -2,6 +2,8 @@ package cn.sqh.dao.mapper;
 
 import cn.sqh.model.User;
 
+import java.util.List;
+
 /**
  * 用户管理
  * Created by Administrator on 2017/2/17.
@@ -15,5 +17,7 @@ public interface UserMapper {
     User selectByPrimaryKey(String userId) throws Exception;
 
     int updateByPrimaryKeySelective(User user) throws Exception;
+
+    List<User> getUsers(User user) throws Exception;
 
 }
