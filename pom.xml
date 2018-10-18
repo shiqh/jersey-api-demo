@@ -9,7 +9,7 @@
 
     <properties>
         <warName>api</warName>
-        <spring.version>4.2.7.RELEASE</spring.version>
+        <spring.version>5.0.8.RELEASE</spring.version>
         <jersey.version>2.25</jersey.version>
         <grizzly.version>2.3.19</grizzly.version>
         <jersey.validation.version>2.21.1</jersey.validation.version>
