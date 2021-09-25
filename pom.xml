@@ -15,7 +15,7 @@
         <jersey.validation.version>2.21.1</jersey.validation.version>
         <druid.version>1.2.5</druid.version>
         <commons.configuration.version>1.10</commons.configuration.version>
-        <fastjson.version>1.2.8</fastjson.version>
+        <fastjson.version>1.2.60</fastjson.version>
         <slf4j.version>1.7.12</slf4j.version>
         <logback.version>1.2.3</logback.version>
         <log4j.over.slf4j.version>1.7.12</log4j.over.slf4j.version>
